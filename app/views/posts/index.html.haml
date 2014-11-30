@@ -1,3 +1,9 @@
+- if user_signed_in?
+	%p#intro
+		Hello
+		= current_user.name
+	%br/
+	
 - @posts.each do|post|
 	= link_to (image_tag post.image.url(:small))
 	%h2= link_to post.title, post
